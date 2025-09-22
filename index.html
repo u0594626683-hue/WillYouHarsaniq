@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <!-- Подключение Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Roboto Thin', serif;
+	    font-weight: 300;
+            color: #B8860B;
+            background-image: url("https://i.postimg.cc/Td2XP9j1/wedding-jpg.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .card {
+            max-width: 600px;
+            width: 90%;
+            padding: 28px;
+            border-radius: 20px;
+            text-align: center;
+            box-sizing: border-box;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            overflow-wrap: break-word;
+        }
+
+        h1, h2, h3 {
+            margin: 10px 0;
+            color: #B8860B;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 18px; /* чуть меньше */
+	    margin-bottom: 1.5em
+        }
+
+        h2 {
+    	    font-size: 32px;
+    	    font-style: italic;
+    	    margin: 10px 0; /* стандартные отступы */
+	}
+
+
+        .name {
+            font-family: 'Great Vibes', serif;
+	    font-weight: 400;
+
+        }
+
+	h2.name:last-of-type {
+    	    margin-bottom: 1em;
+	}
+
+
+        p {
+            margin: 10px 0;
+            font-size: 13px; /* уменьшено */
+            line-height: 1.9;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        form {
+            margin-top: 18px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 3px;
+            font-size: 12px; /* чуть меньше */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        input, select {
+            width: 100%;
+            padding: 4px;
+            margin-top: 2px;
+            margin-bottom: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 12px; /* текст внутри полей */
+        }
+
+        button {
+            width: 100%;
+            padding: 8px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px; /* чуть меньше */
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #555;
+        }
+
+        .success-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .popup-close:hover {
+            color: #333;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 18px;
+            }
+            h2.name {
+                font-size: 28px;
+            }
+            h1 {
+                font-size: 16px;
+            }
+            p, label {
+                font-size: 12px;
+            }
+            input, select, button {
+                font-size: 12px;
+                padding: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Дорогие родные и близкие!</h1>
+        <h2 class="name">Гор</h2>
+        <h3 class="name">&</h3>
+        <h2 class="name">Наталья</h2>
+
+        <p>
+            Приглашаем Вас разделить нашу радость в наш свадебный день. <br>
+            <strong>Суббота, 8 ноября в 17:00 по мск.<br></strong><br>
+        </p>
+
+        <p>
+            <em>White Hall Пушкин.</em><br>
+            ул. Землячки, 40<br>
+            г. Волгоград
+        </p>
+
+        <form 
+    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSevUTYG57kgxTOjGMhrLLcIAshuqaHAuNu4V8SQ7vCiC8-pFg/formResponse"
+    method="POST"
+    target="hidden_iframe"
+    onsubmit="submitted=true"
+>
+    <label>
+        ФИО:
+        <input type="text" name="entry.503846170" required>
+    </label>
+
+    <label>
+        Вы придёте?
+        <select name="entry.842392402" required>
+            <option value="" disabled selected>Выберите вариант</option>
+            <option value="Приду">Приду</option>
+            <option value="Не приду">Не приду</option>
+        </select>
+    </label>
+
+    <label>
+        Если придёте, то с кем:
+        <input type="text" name="entry.38422398" placeholder="">
+    </label>
+
+    <button type="submit">Отправить</button>
+</form>
+
+<iframe name="hidden_iframe" style="display:none;" onload="if(submitted) successMessage()"></iframe>
+
+
+    </div>
+
+    <div id="successPopup" class="success-popup">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            <h2>Спасибо за ваш ответ!</h2>
+        </div>
+    </div>
+
+    <script>
+        let submitted = false;
+        function successMessage() {
+            document.getElementById('successPopup').style.display = 'flex';
+            submitted = false;
+            document.querySelector('form').reset();
+        }
+
+        function closePopup() {
+            document.getElementById('successPopup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
